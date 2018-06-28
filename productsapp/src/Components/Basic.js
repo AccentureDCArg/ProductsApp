@@ -12,6 +12,12 @@ class Basic extends Component {
                     <p>{ this.props.product.description }</p>
                     <img src={ this.props.product.image } />
                 </main>
+                <button onClick={ this.props.onClick }>
+                    Eliminar Version
+                </button>
+                <button onClick={ this.props.onClickNewVersion }>
+                    Agregar Version
+                </button>
             </article>
         );
     }

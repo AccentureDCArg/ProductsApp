@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Basic from '../Components/Basic';
 import axios from 'axios';
-
+import { eraseVersion, newVersion } from '../redux/actions/app_actions';
 
 class BasicContainer extends Component {
     constructor(props) {
@@ -11,7 +12,15 @@ class BasicContainer extends Component {
             product : {}
         };
     }
+    handleClick() {
+        const { dispatch } = this.props;
+        dispatch(eraseVersion());
+    }
 
+    handleNewVersionClick() {
+        const { dispatch } = this.props;
+        dispatch(newVersion());
+    }
     componentDidMount() {
         axios(
             {
@@ -41,11 +50,13 @@ class BasicContainer extends Component {
     render() {
 
         return (
-            <Basic 
+            <Basic
             product = { this.state.product }
+            onClick = { this.handleClick.bind(this) }
+            onClickNewVersion = { this.handleNewVersionClick.bind(this) }
             />
         );
     }
 }
 
-export default BasicContainer;
+export default connect()(BasicContainer);
