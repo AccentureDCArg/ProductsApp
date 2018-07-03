@@ -1,24 +1,20 @@
 {
   "name": "productsapp",
-  "version": "1.0.0",
-  "description": "proyecto para consumir productos de mercadolibre en react",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AccentureDCArg/ProductsApp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AccentureDCArg/ProductsApp/issues"
-  },
-  "homepage": "https://github.com/AccentureDCArg/ProductsApp#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
-    "create-react-app": "^1.5.2"
+    "@material-ui/core": "^1.3.0",
+    "material-ui": "^0.20.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
