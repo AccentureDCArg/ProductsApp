@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Basic.css';
+import Button from './Button';
+import { ButtonGaliciaPrimary  } from './Button';
+import Product from './Product';
 
 class Basic extends Component {
     render() {
@@ -8,16 +11,18 @@ class Basic extends Component {
                 <header>
                     <h1>{ this.props.product.product_name }</h1>
                 </header>
-                <main>
-                    <p>{ this.props.product.description }</p>
-                    <img src={ this.props.product.image } />
-                </main>
-                <button onClick={ this.props.onClick }>
+                <Product image = {this.props.product.image}>
+                    { this.props.product.description }
+                </Product>
+                <ButtonGaliciaPrimary>
+                    Comprar Producto
+                </ButtonGaliciaPrimary>
+                <Button onClick={ this.props.onClick }>
                     Eliminar Version
-                </button>
-                <button onClick={ this.props.onClickNewVersion }>
+                </Button>
+                <Button primary onClick={ this.props.onClickNewVersion }>
                     Agregar Version
-                </button>
+                </Button>
             </article>
         );
     }
